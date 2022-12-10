@@ -2,9 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone repository') {
-        checkout scm
-        }
         stage('Build image') {
             app = docker.build("devops")
         }
