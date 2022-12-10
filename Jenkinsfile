@@ -1,23 +1,15 @@
 pipeline {
-    agent any
+    def app
 
     stages {
         stage('Build image') {
-            steps {
-                script{
-                    docker.build("devops")
-                }
-            }
+            app = docker.build("devops")
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+        stage('Push image') {
+            docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                app.push("${env.BUILD_NUMBER}")
+                app.push("latest")
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+    }
     }
 }
