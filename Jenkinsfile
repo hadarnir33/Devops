@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
+        stage('Clone repository') {
+        checkout scm
+        }
+        stage('Build image') {
+            app = docker.build("devops")
         }
         stage('Test') {
             steps {
