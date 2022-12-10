@@ -1,10 +1,17 @@
 Prerequisites:
 
-install ngrok to expose jenkins to the Internet
+- Install ngrok to expose jenkins to the Internet
 
+- Unzip jenkins_home.zip to /opt
 
 Running:
 
 In order to run the container, please run the following command in the project directory
 
 docker compose up -d
+
+Pipeline purpose:
+
+Every time a merge request occurs a webhook is trigered and start a pipeline in our jenkins instance.
+
+main.py run in a distroless python image
