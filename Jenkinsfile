@@ -3,9 +3,7 @@ pipeline {
 
     stages {
         stage('Build image') {
-            steps {
-                app = docker.build("devops")
-            }
+            docker.build("devops")
         }
         stage('Test') {
             steps {
