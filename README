@@ -16,3 +16,5 @@ docker compose up -d
 Every time a merge request occurs a webhook is trigered and start a pipeline in our jenkins instance.
 
 main.py run in a distroless python image
+
+test
