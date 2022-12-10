@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-                sh 'ls'
+                script{
+                    docker.build("devops")
+                }
             }
         }
         stage('Test') {
