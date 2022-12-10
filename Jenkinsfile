@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Build image') {
             steps {
                 script {
-                    app = docker.build("devops")
+                    app = docker.build("bignirnir/devops")
                 }
             }    
         }
