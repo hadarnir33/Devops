@@ -3,7 +3,6 @@ Prerequisites:
 install ngrok to expose jenkins to the Internet
 
 
-
 Running:
 
 In order to run the container, please run the following command in the project directory
