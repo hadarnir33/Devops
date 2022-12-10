@@ -1,0 +1,16 @@
+Running:
+
+In order to run the container, please run the following command in the project directory
+
+docker compose up
+
+
+CI explanation:
+
+Every time a merge request occurs in https://github.com/hadarnir33/Devops.git
+A CI process is starting by a webhook to a Jenkins server running locally.
+
+CI stages:
+
+1) Build a distroless python image that contains main.py
+2) Push the new image to docker hub
