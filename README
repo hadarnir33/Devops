@@ -1,6 +1,7 @@
 ## Prerequisites:
 
 - Install ngrok to expose jenkins to the Internet
+  run: ngrok http 8080
 
 - Unzip jenkins_home.zip to /opt
 
